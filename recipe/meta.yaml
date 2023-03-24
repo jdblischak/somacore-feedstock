@@ -1,0 +1,50 @@
+{% set name = "somacore" %}
+{% set version = "1.0.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/somacore-{{ version }}.tar.gz
+  sha256: 7db0eb07beeec84f372ba04c425342987373dd5479b58c5c296d264267463f8c
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+
+requirements:
+  host:
+    - python >=3.7,<4.dev0
+    - setuptools
+    - setuptools-scm
+    - wheel
+    - pip
+  run:
+    - python >=3.7
+    - anndata
+    - attrs >=22.1
+    - numba
+    - numpy >=1.21
+    - pandas
+    - pyarrow
+    - scipy
+    - typing-extensions
+
+test:
+  imports:
+    - somacore
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  summary: Python-language API specification and base utilities for implementation of the SOMA system.
+  license: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - Shelnutt2
