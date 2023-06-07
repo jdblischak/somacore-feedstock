@@ -1,5 +1,5 @@
 {% set name = "somacore" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/somacore-{{ version }}.tar.gz
-  sha256: 7db0eb07beeec84f372ba04c425342987373dd5479b58c5c296d264267463f8c
+  sha256: ef143f4f42e16e1c5f4721176a620c5c0fc9be431c2265faf657b70d8aee204e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,12 +23,12 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - anndata
-    - attrs >=22.1
+    - anndata >= 0.9.1
+    - attrs >=23.1
     - numba
     - numpy >=1.20
     - pandas
-    - pyarrow
+    - pyarrow >= 12.0
     - scipy
     - typing-extensions
 
