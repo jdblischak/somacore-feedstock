@@ -32,6 +32,7 @@ requirements:
     - numpy >=1.21
     - pandas
     - pyarrow
+    - pyarrow_hotfix
     - scipy
     - typing-extensions >=4.1 # For LiteralString
 # See also https://github.com/single-cell-data/SOMA/blob/VERSION-GOES-HERE/pyproject.toml
