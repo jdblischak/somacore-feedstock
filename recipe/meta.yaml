@@ -34,6 +34,7 @@ requirements:
     - pyarrow
     - pyarrow-hotfix
     - scipy
+    - shapely
     - typing-extensions >=4.1 # For LiteralString
 # See also https://github.com/single-cell-data/SOMA/blob/VERSION-GOES-HERE/pyproject.toml
 
