@@ -1,5 +1,5 @@
 {% set name = "somacore" %}
-{% set version = "1.0.18" %}
+{% set version = "1.0.19" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ package:
 # shasum -a 256 somacore-i.j.k.tar.gz
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/somacore-{{ version }}.tar.gz
-  sha256: fddf0a32ac9b539db14ae19b351522d58ec645fdbf95c30fc7d9d16123b929f6
+  sha256: 5ecfef8c661585d38aec660384b013fd12e0642e26f1aa23a1978a86628b4043
 
 build:
   noarch: python
